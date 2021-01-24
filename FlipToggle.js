@@ -112,6 +112,7 @@ class FlipToggle extends React.Component {
     } else {
       toValue = 0;
     }
+    if (I18nManager.isRTL) toValue = toValue * -1;
     Animated.timing(this.offsetX, {
       toValue: toValue,
       duration: 300,
